@@ -47,22 +47,28 @@ function getWinner(playerMove,computerMove) {
     else if (playerMove === "rock") {
         if (computerMove === "scissors") {
             winner = "player";
+            console.log("\nRock beats scissors!\n");
         } else {
             winner = "computer";
+            console.log("\nPaper covers rock!\n");
         }
     }
     else if (playerMove === "scissors") {
         if (computerMove === "paper") {
             winner = "player";
+            console.log("\nScissors cuts paper!\n");
         } else {
             winner = "computer";
+            console.log("\nRock beats scissors!\n");
         }
     }
     else if (playerMove === "paper") {
         if (computerMove === "rock") {
             winner = "player";
+            console.log("\nPaper covers rock!\n");
         } else {
             winner = "computer";
+            console.log("\nScissors cuts paper!\n");
         }
     }
     else {
@@ -83,18 +89,18 @@ function playToFive() {
         var winner = getWinner(playerMove, computerMove);
 
         if (winner === "player") {
-            console.log("Player chose " + playerMove + " and Computer chose " + computerMove + "\nPlayer wins this round!");
+            console.log("Player chose " + playerMove + " and Computer chose " + computerMove + ".\nPlayer wins this round!\n");
             playerWins++;
-            console.log("SCORE\nPlayer: " + playerWins + "\tComputer: " + computerWins);
+            console.log("SCORE\nPlayer: " + playerWins + "\tComputer: " + computerWins + "\n");
         }
         else if (winner === "computer") {
-            console.log("Player chose " + playerMove + " and Computer chose " + computerMove + "\nComputer wins this round!");
+            console.log("Player chose " + playerMove + " and Computer chose " + computerMove + ".\nComputer wins this round!\n");
             computerWins++;
-            console.log("SCORE\nPlayer: " + playerWins + "\tComputer: " + computerWins);
+            console.log("SCORE\nPlayer: " + playerWins + "\tComputer: " + computerWins + "\n");
         }
         else if (winner === "tie") {
-            console.log("It's a tie!");
-            console.log("SCORE\nPlayer: " + playerWins + "\tComputer: " + computerWins);
+            console.log("It's a tie!\n");
+            console.log("SCORE\nPlayer: " + playerWins + "\tComputer: " + computerWins + "\n");
         }
     }
 
